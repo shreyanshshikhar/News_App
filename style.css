@@ -152,34 +152,3 @@ main {
     margin-block: 12px;
 }
 
-@media screen and (max-width:1080px) {
-    .cards-container {
-        justify-content: space-around;
-    }
-    .card {
-        width: 48vw;
-    }
-}
-
-@media screen and (max-width:534px) {
-    .nav-item {
-        font-size: small;
-    }
-}
-
-@media screen and (max-width:479px) {
-    .nav-links {
-        display: none;
-    }
-    .card {
-        width: 98vw;
-    }
-    .news-input {
-        margin-left: -10px;
-        width: 150px;
-    }
-    .search-button {
-        padding: 8px 24px;
-        margin-right: 12px;
-    }
-}
