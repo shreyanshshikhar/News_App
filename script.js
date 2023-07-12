@@ -75,16 +75,14 @@ function fillDataInCard(cardClone, article) {
     });
 }
 let curSelectedNav = null;
-
 function onNavItemClick(id) {
     fetchNews(id);
     const navItem = document.getElementById(id);
-    if (curSelectedNav) {
-        curSelectedNav.classList.remove("active");
-    }
+    curSelectedNav?.classList.remove("active");
     curSelectedNav = navItem;
     curSelectedNav.classList.add("active");
 }
+
 const searchButton = document.getElementById("search-button");
 const searchText = document.getElementById("search-text");
 
@@ -92,10 +90,6 @@ searchButton.addEventListener("click", () => {
     const query = searchText.value;
     if (!query) return;
     fetchNews(query);
-    if (curSelectedNav) {
-        curSelectedNav.classList.remove("active");
-        curSelectedNav = null;
-
-    }
+    curSelectedNav?.classList.remove("active");
     curSelectedNav = null;
 });
